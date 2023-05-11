@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Elegant Tek</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/CSS/home.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
+      integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="message">
+      <p></p>
+      <button class="btn-close-msg">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <!-- Navbar -->
+        <nav class="navbar">
+          <a href="/" class="logo">
+            <img src="/Images/Logo.svg" alt="logo" />
+          </a>
+          <ul class="nav-links">
+            <li class="nav-link active"><a href="#section1">Home</a></li>
+            <li class="nav-link"><a href="#section2">Services</a></li>
+            <li class="nav-link"><a href="#section3">About</a></li>
+            <li class="nav-link"><a href="#section4">Contact</a></li>
+            <li class="nav-link-alt"><a href="/careers">Careers</a></li>
+          </ul>
+          <button class="burger btn">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </button>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <!-- End of Header -->
+
+      <!-- Section 1 -->
+      <section id="section1" class="section-1" data-nav="Section 1">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide banner">
+              <img
+                src="/Images/Home Page Assets/Banner Image_1.jpg"
+                class="banner-img"
+                alt="Header 1"
+              />
+              <div class="banner-content">
+                <h1>Partner with the Best IT Consultants</h1>
+                <p>
+                  From strategy development to implementation, we offer
+                  comprehensive IT solutions to help your business thrive.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide banner">
+              <img
+                src="/Images/Home Page Assets/Banner Image_2.jpg"
+                class="banner-img"
+                alt="Header 2"
+              />
+              <div class="banner-content">
+                <h1>Expert IT Consulting for Your Unique Needs</h1>
+                <p>
+                  We understand that every business is different - that's why we
+                  tailor our solutions to fit your specific goals and
+                  requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Section 1 -->
+
+      <!-- Section 2 -->
+      <section id="section2" class="section-2" data-nav="Section 2">
+        <div class="section-title section-2-title">
+          Services
+          <h1 class="main-title">Our Services</h1>
+        </div>
+
+        <div class="services">
+          <div class="service">
+            <img
+              src="/Images/Home Page Assets/cloud-service.png"
+              alt="Cloud Service"
+            />
+            <div class="service-content">
+              <h3 class="service-content-heading">
+                Cloud Technology Solutions
+              </h3>
+              <p class="service-content-para">
+                Unlock the full potential of your business with cloud technology
+                solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="service">
+            <img
+              src="/Images/Home Page Assets/app-development.png"
+              alt="App Development"
+            />
+            <div class="service-content">
+              <h3 class="service-content-heading">Mobile Apps Development</h3>
+              <p class="service-content-para">
+                Bridging the gap between your business and your customers.
+              </p>
+            </div>
+          </div>
+
+          <div class="service">
+            <img
+              src="/Images/Home Page Assets/infrastructure.png"
+              alt="Infrastructure"
+            />
+            <div class="service-content">
+              <h3 class="service-content-heading">Infrastructure Services</h3>
+              <p class="service-content-para">
+                Efficient and effective infrastructure services for modern
+                businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/services" class="btn service-btn"
+          >see more <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </section>
+      <!-- End of Section 2 -->
+
+      <!-- Section 3 -->
+      <section id="section3" class="section-3" data-nav="Section 3">
+        <h1 class="section-3-heading">Want to know more about us?</h1>
+        <a href="/about" class="btn about-btn">more about us</a>
+      </section>
+      <!-- End of Section 3 -->
+
+      <!-- Section 4 -->
+      <section id="section4" class="section-4" data-nav="Section 4">
+        <div class="section-title section-4-title">
+          Contact
+          <h1 class="main-title">Contact Us</h1>
+        </div>
+
+        <div class="contact-form">
+          <div class="contact-alt">
+            <img src="/Images/Home Page Assets/email-png.png" alt="Email" />
+
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4>583 D ONOFRIO DRIVE SUITE 4 MADISON, WI 53719</h4>
+            </div>
+
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <h4>210-758-0724</h4>
+            </div>
+
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <h4>contact@eleganttek.com</h4>
+            </div>
+          </div>
+          <form action="/" method="post" class="form">
+            <h2 class="form-heading">message us!</h2>
+            <div class="form-control">
+              <input type="text" name="username" placeholder="Your name" />
+              <input type="email" name="email" placeholder="Your email" />
+            </div>
+
+            <div class="form-control">
+              <textarea name="message" placeholder="Your message"></textarea>
+            </div>
+
+            <button class="btn form-btn" type="submit">send message</button>
+          </form>
+        </div>
+      </section>
+      <!-- End of Section 4 -->
+
+      <!-- Footer -->
+<footer class="footer">
+  <p class="copyright">Elegant Tek &copy; 2023</p>
+</footer>
+<!-- End of Footer -->
+</div>
+
+<script src="/JS/home.js"></script>
+</body>
+</html>
