@@ -30,6 +30,11 @@ $(document).ready(function () {
   
   menuBtn.addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("show");
+    if(document.querySelector(".navbar").classList.contains("show")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll"
+    }
   });
   // End of Sidebar
 

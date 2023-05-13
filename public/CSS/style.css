@@ -244,30 +244,32 @@ body {
     
       .navbar {
         height: 8rem;
-        padding: 0 8rem;
+        padding: 0 6rem;
       }
     
       .logo {
-        width: 20rem;
+        width: 25rem;
       }
     
       .nav-links {
-        /* display: none; */
         width: 40%;
         height: 100vh;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         position: fixed;
         top: 0;
         right: -40%;
         z-index: 13;
-    
         background: #343a40;
         transition: all 0.3s ease-in-out;
       }
     
       .show .nav-links {
         right: 0;
+      }
+
+      .nav-link {
+        margin-bottom: 5rem;
       }
     
       .nav-links a {
@@ -347,6 +349,9 @@ body {
 }
 
 @media(max-width: 720px) {
+  .navbar {
+    padding: 0 4rem;
+  }
     .nav-links {
         width: 50%;
         right: -50%;
@@ -366,16 +371,12 @@ body {
       }
 
       .footer p {
-        font-size: 1.4rem;
+        padding: 0 4rem;
+        font-size: 1.5rem;
       }
 }
 
-@media(max-width: 600px) {
-    .navbar {
-        height: 6rem;
-        padding: 0 6rem;
-      }
-    
+@media(max-width: 600px) {    
       .logo {
         width: 15rem;
       }
@@ -383,25 +384,19 @@ body {
       .section-1-heading {
         font-size: 4rem;
       }
-
-      .footer {
-        height: 6rem;
-      }
 }
 
 @media(max-width: 550px) {
-    .navbar {
-        height: 5rem;
-        padding: 0 5rem;
-      }
-    
+  html {
+    font-size: 50%;
+  }    
       .logo {
-        width: 12rem;
+        width: 15rem;
       }
     
       .nav-links {
-        width: 60%;
-        right: -60%;
+        width: 100%;
+        right: -100%;
       }
     
       .burger {
@@ -415,14 +410,6 @@ body {
     
       .section-1-heading {
         font-size: 3.5rem;
-      }
-
-      .footer {
-        height: 5rem;
-      }
-
-      .footer p {
-        font-size: 1.3rem;
       }
 }
 

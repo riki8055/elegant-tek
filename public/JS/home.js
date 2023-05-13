@@ -42,6 +42,13 @@ navbarLinks.forEach((link) => {
     document.querySelector(sectionId).scrollIntoView({
       behavior: "smooth",
     });
+
+    setTimeout(() => {
+      document.querySelector(".navbar").classList.remove("show");
+      if(document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "scroll";
+      }
+    }, 150);
   });
 });
 
@@ -56,7 +63,7 @@ window.addEventListener("scroll", (event) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (scrollPosition >= sectionTop - sectionHeight / 4) {
+    if (scrollPosition >= sectionTop - sectionHeight / 8) {
       // Get the section ID
       const sectionId = section.getAttribute("id");
 
@@ -80,6 +87,11 @@ const menuBtn = document.querySelector(".burger");
 
 menuBtn.addEventListener("click", () => {
   document.querySelector(".navbar").classList.toggle("show");
+  if(document.querySelector(".navbar").classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "scroll"
+  }
 });
 // End of Sidebar
 
