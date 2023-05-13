@@ -204,6 +204,25 @@ body {
   letter-spacing: 0.3rem;
   line-height: 1.4;
 }
+
+.social-media-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+  padding: 1rem;
+  z-index: 9;
+}
+
+.social-media-link i {
+  font-size: 3rem;
+  color: #F8F8F8;
+  opacity: .7;
+  transition: opacity .1s ease-in;
+}
+
+.social-media-link:hover i {
+  opacity: 1;
+}
 /* End of Section 1 */
 
 /* Section 2 */
@@ -1144,6 +1163,16 @@ body {
     font-size: 1.5rem;
     margin-top: 2rem;
     display: none;
+  }
+
+  .social-media-link {
+    right: 2.5rem;
+    bottom:  .5rem;
+    padding:  .5rem;
+  }
+
+  .social-media-link i {
+    font-size: 2.5rem;
   }
 
   .section-title {
