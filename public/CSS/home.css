@@ -392,6 +392,7 @@ body {
   background: #717171;
   padding: 10rem 5rem;
   border-radius: 1rem 0 0 1rem;
+  position: relative;
 }
 
 .contact-alt img {
@@ -423,6 +424,15 @@ body {
   color: #dee2e6;
   font-family: var(--Font-Family-1);
   font-weight: 400;
+}
+
+.everify-symbol {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  background: #F8F8F8;
+  padding: 1rem;
+  border-radius: .3rem;
 }
 
 .form {
