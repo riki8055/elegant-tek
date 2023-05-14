@@ -126,7 +126,7 @@ app.post("/", (req, res) => {
     const mailOPtions = {
         from: email,
         to: 'tu734583@gmail.com',
-        subject: `${username}<${email}> left message through online web platform.`,
+        subject: `${username} <${email}> left message through online web platform.`,
         text: message
     }
 
@@ -199,7 +199,7 @@ app.post('/careers/:jobposition/upload', upload.single('resume'), (req, res) => 
         from: req.body.email,
         to: process.env.EMAIL,
         subject: req.body.title,
-        text: `${req.body.name}<${req.body.email}> applied for ${req.body.title} role.`,
+        text: `${req.body.name} <${req.body.email}> applied for ${req.body.title} role.`,
         attachments: [
             {
                 filename: req.file.path,
