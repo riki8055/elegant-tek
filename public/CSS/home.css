@@ -434,12 +434,14 @@ body {
 }
 
 .contact-form {
-  width: 1300px;
+  width: 170rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10rem;
 }
 
-.contact-alt {
+.contact-alt, .everify-alt {
   width: 50rem;
   height: 70rem;
   display: flex;
@@ -448,8 +450,11 @@ body {
   align-items: center;
   background: #717171;
   padding: 10rem 5rem;
-  border-radius: 1rem 0 0 1rem;
   position: relative;
+}
+
+.contact-alt {
+  border-radius: 1rem 0 0 1rem;
 }
 
 .contact-alt img {
@@ -493,7 +498,7 @@ body {
 }
 
 .form {
-  width: 90rem;
+  width: 40%;
   height: 70rem;
   background: #f8f9fa;
   padding: 5rem;
@@ -501,7 +506,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 0 1rem 1rem 0;
 }
 
 .form-heading {
@@ -517,7 +521,7 @@ body {
 .form-control {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
 .form input,
@@ -531,7 +535,7 @@ body {
 }
 
 .form input {
-  width: 32rem;
+  width: 100%;
   border-bottom: 0.2rem solid #c0c0c0;
   padding: 1rem;
 }
@@ -562,6 +566,36 @@ body {
   background: #717171;
   color: #ffffff;
   cursor: pointer;
+}
+
+.everify-alt {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.everify-alt h2 {
+  font-family: var(--Font-Family-2);
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  letter-spacing: 0.2rem;
+}
+
+.everify-alt img {
+  width: 22rem;
+  background: #fff;
+  border-radius: .4rem;
+  margin: 4rem 0;
+  padding: 1rem 2rem;
+}
+
+.everify-alt p {
+  font-family: var(--Font-Family-1);
+  font-weight: 400;
+  font-size: 2rem;
+  color: #E0E0E0;
+  letter-spacing: 0.2rem;
+  line-height: 3.5rem;
 }
 
 /* End of Section 4 */
@@ -705,11 +739,11 @@ body {
   }
 
   .contact-form {
-    width: 1200px;
+    width: 150rem;
     margin-top: 5rem;
   }
 
-  .contact-alt {
+  .contact-alt, .everify-alt {
     width: 40rem;
     height: 60rem;
     padding: 8rem 4rem;
@@ -743,7 +777,6 @@ body {
   }
 
   .form input {
-    width: 30rem;
     padding: 0.8rem;
   }
 
@@ -755,6 +788,20 @@ body {
   .form-btn {
     font-size: 1.5rem;
     padding: 1.5rem 0;
+  }
+
+  .everify-alt h2 {
+    font-size: 2.2rem;
+  }
+
+  .everify-alt img {
+    width: 18rem;
+    margin: 3rem 0;
+  }
+
+  .everify-alt p {
+    font-size: 1.6rem;
+    line-height: 3rem;
   }
 
   .footer {
@@ -822,7 +869,23 @@ body {
   }
 
   .contact-form {
-    width: 1100px;
+    width: 135rem;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .everify-alt h2 {
+    font-size: 2rem;
+  }
+
+  .everify-alt img {
+    width: 16rem;
+  }
+
+  .everify-alt p {
+    font-size: 1.5rem;
   }
 }
 
@@ -848,11 +911,16 @@ body {
   }
 
   .contact-form {
-    width: calc(100% - 2rem);
+    width: 120rem;
   }
 
   .form {
+    width: 40%;
     padding: 2rem 4rem;
+  }
+
+  .form-control {
+    margin-bottom: 2rem;
   }
 
   .form input,
@@ -861,7 +929,6 @@ body {
   }
 
   .form input {
-    width: calc((100% / 2) - 2rem);
     padding: 0.6rem;
   }
 }
@@ -1076,11 +1143,15 @@ body {
   }
 
   .contact-form {
+    width:  calc(100% - 2rem);
     flex-direction: column;
   }
 
-  .contact-alt {
+  .contact-alt, .everify-alt {
     width: 100%;
+  }
+
+  .contact-alt {
     border-radius: 1rem 1rem 0 0;
   }
 
@@ -1099,7 +1170,6 @@ body {
   .form {
     width: 100%;
     padding: 4rem 5rem;
-    border-radius: 0 0 1rem 1rem;
   }
 
   .form-heading {
@@ -1116,9 +1186,33 @@ body {
     padding: 2rem 0;
   }
 
+  .everify-alt {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .everify-alt h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .everify-alt img {
+    width: 20rem;
+    margin: 3rem 0;
+  }
+
+  .everify-alt p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
   .footer {
     height: 8rem;
     font-size: 1.5rem;
+  }
+
+  .footer p {
+    font-size: 1.3rem;
   }
 }
 
@@ -1185,6 +1279,12 @@ body {
 
   .contact-alt h4 {
     font-size: 2.5rem;
+  }
+
+  .form {
+    width: 100%;
+    height: max-content;
+    padding: 4rem 3rem;
   }
 
   .form-heading {
@@ -1412,6 +1512,24 @@ body {
     font-size: 1.5rem;
     padding: 1.5rem 0;
     margin-top: 3rem;
+  }
+
+  .everify-alt {
+    padding: 6rem 3rem;
+  }
+
+  .everify-alt h2 {
+    font-size: 2rem;
+  }
+
+  .everify-alt img {
+    width: 15rem;
+    margin: 2rem 0;
+  }
+
+  .everify-alt p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 
   .footer .copyright {
