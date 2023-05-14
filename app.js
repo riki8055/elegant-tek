@@ -218,7 +218,7 @@ app.post(
 );
 
 app.get("*", (req, res) => {
-  res.send("OOPS! Page not found!");
+  res.redirect("/");
 });
 
 const port = process.env.PORT || 3000;
