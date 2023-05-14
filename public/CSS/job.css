@@ -35,6 +35,63 @@ html {
   visibility: hidden;
   transition: all .4s ease-in-out;
 }
+
+.et-business-links {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background: #1e6091;
+  padding: 1.3rem 10rem;
+}
+
+.contacts, .social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts .phone, .contacts .email {
+  font-family: var(--Font-Family-5);
+  font-size: 1.8rem;
+  color: #E0E0E0;
+  letter-spacing: .15rem;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.contacts i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #E0E0E0;
+}
+
+.contacts h4 {
+  font-weight: 400;
+  letter-spacing: .25rem;
+}
+
+.social-media-link {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.social-media-link:hover {
+  background: #fff;
+}
+
+.social-media-link i {
+  font-size:  1.7rem;
+}
 /* End of Resets and Commons */
 
 /* Temps */
@@ -381,6 +438,29 @@ body {
     html {
       font-size: 58%;
     }
+
+    .et-business-links {
+      
+      padding: 1.2rem 8rem;
+    }
+  
+    .contacts .phone, .contacts .email {
+      font-size: 1.5rem;
+    }
+  
+    .contacts i {
+      font-size: 1.8rem;
+    }
+  
+    .social-media-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 2rem;
+    }
+  
+    .social-media-link i {
+      font-size: 1.5rem;
+    }
   
       .navbar {
         height: 10rem;
@@ -497,6 +577,28 @@ body {
   @media(max-width: 1000px) {
     html {
       font-size: 55%;
+    }
+
+    .et-business-links {
+      padding:  1.2rem 6rem;
+    }
+  
+    .contacts .phone, .contacts .email {
+      font-size: 1.3rem;
+    }
+  
+    .contacts i {
+      font-size: 1.6rem;
+    }
+  
+    .social-media-link {
+      width: 2.3rem;
+      height: 2.3rem;
+      margin-left: 1.5rem;
+    }
+  
+    .social-media-link i {
+      font-size: 1.3rem;
     }
 
     .navbar {
@@ -767,6 +869,29 @@ body {
     font-size: 50%;
   }
 
+  .et-business-links {
+    padding: 1.2rem 4rem;
+  }
+
+  .contacts .phone, .contacts .email {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+  }
+
+  .contacts i {
+    font-size: 1.5rem;
+  }
+
+  .social-media-link {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+  }
+
+  .social-media-link i {
+    font-size: 1.2rem;
+  }
+
   .logo {width: 15rem;}
 
   .nav-links {
@@ -809,6 +934,26 @@ body {
 }
 
 @media(max-width: 420px) {
+  .et-business-links {
+    padding: .6rem 3rem;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts .phone, .contacts .email {
+    font-size: 1.1rem;
+    margin-right: 0;
+    justify-content: flex-start;
+    padding: .5rem;
+    margin: 0;
+  }
+
+  .contacts i {
+    font-size: 1.3rem;
+  }
   .section-1 {
     padding: 5rem 2rem 0 2rem;
   }
