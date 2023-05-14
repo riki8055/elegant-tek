@@ -313,16 +313,6 @@ body {
   line-height: 4.6rem;
 }
 
-.everify-symbol {
-  width: 7rem;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background: #F8F8F8;
-  padding: 1rem;
-  border-radius: .3rem;
-}
-
 .apply-form form {
   width: 100%;
   display: flex;
