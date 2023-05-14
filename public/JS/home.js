@@ -1,13 +1,13 @@
 // Navbar Position
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  const section2 = document.querySelector('.section-2');
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  const section2 = document.querySelector(".section-2");
   const section2Top = section2.offsetTop;
-  
+
   if (window.pageYOffset >= section2Top - 1) {
-    navbar.classList.add('nav-scroll');
+    navbar.classList.add("nav-scroll");
   } else {
-    navbar.classList.remove('nav-scroll');
+    navbar.classList.remove("nav-scroll");
   }
 });
 // End of Navbar Position
@@ -45,7 +45,7 @@ navbarLinks.forEach((link) => {
 
     setTimeout(() => {
       document.querySelector(".navbar").classList.remove("show");
-      if(document.body.style.overflow === "hidden") {
+      if (document.body.style.overflow === "hidden") {
         document.body.style.overflow = "scroll";
       }
     }, 150);
@@ -87,10 +87,10 @@ const menuBtn = document.querySelector(".burger");
 
 menuBtn.addEventListener("click", () => {
   document.querySelector(".navbar").classList.toggle("show");
-  if(document.querySelector(".navbar").classList.contains("show")) {
+  if (document.querySelector(".navbar").classList.contains("show")) {
     document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = "scroll"
+    document.body.style.overflow = "scroll";
   }
 });
 // End of Sidebar
@@ -98,20 +98,22 @@ menuBtn.addEventListener("click", () => {
 // Deliver Message
 // Get the status parameter from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const status = urlParams.get('deliverStatus');
+const status = urlParams.get("deliverStatus");
 
 // Display a message based on the status
-if (status === 'success') {
-  document.getElementById("message").style.display = 'block'
-  document.getElementById("message").style.background = '#74c69d'
-  document.querySelector("#message p").innerHTML = "Message delivered successfully.";
-} else if (status === 'error') {
-  document.getElementById("message").style.display = 'block'
-  document.getElementById("message").style.background = '#ffd6a5'
-  document.querySelector("#message p").innerHTML = "Error delivering message. Please try again.";
+if (status === "success") {
+  document.getElementById("message").style.display = "block";
+  document.getElementById("message").style.background = "#74c69d";
+  document.querySelector("#message p").innerHTML =
+    "Message delivered successfully.";
+} else if (status === "error") {
+  document.getElementById("message").style.display = "block";
+  document.getElementById("message").style.background = "#ffd6a5";
+  document.querySelector("#message p").innerHTML =
+    "Error delivering message. Please try again.";
 }
 
-document.querySelector('.btn-close-msg').addEventListener('click', () => {
-  document.getElementById("message").style.display = 'none'
-})
+document.querySelector(".btn-close-msg").addEventListener("click", () => {
+  document.getElementById("message").style.display = "none";
+});
 // End of Deliver Message

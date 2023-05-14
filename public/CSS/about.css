@@ -24,7 +24,6 @@
 
 .content-holder {
   width: 100%;
-
   padding: 7rem 15rem;
 }
 
@@ -51,7 +50,6 @@
   font-weight: 600;
   font-size: 4rem;
   color: #343a40;
-  /* margin-top: 3rem; */
   letter-spacing: 0.2rem;
 }
 

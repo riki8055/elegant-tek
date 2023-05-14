@@ -56,7 +56,7 @@ body {
   font-size: 1.8rem;
   text-align: center;
   color: #555;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
 }
 
 .et-business-links {
@@ -67,17 +67,19 @@ body {
   padding: 1.3rem 10rem;
 }
 
-.contacts, .social-media-links {
+.contacts,
+.social-media-links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contacts .phone, .contacts .email {
+.contacts .phone,
+.contacts .email {
   font-family: var(--Font-Family-5);
   font-size: 1.8rem;
-  color: #E0E0E0;
-  letter-spacing: .15rem;
+  color: #e0e0e0;
+  letter-spacing: 0.15rem;
   margin-right: 4rem;
   display: flex;
   justify-content: center;
@@ -88,12 +90,12 @@ body {
 .contacts i {
   font-size: 2rem;
   margin-right: 1rem;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .contacts h4 {
   font-weight: 400;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
 }
 
 .social-media-link {
@@ -113,7 +115,7 @@ body {
 }
 
 .social-media-link i {
-  font-size:  1.7rem;
+  font-size: 1.7rem;
 }
 
 .btn-close-msg {
@@ -221,27 +223,6 @@ body {
   transform: translateY(-50%);
   padding: 1.5rem 0 1.5rem 3.5rem;
 }
-
-/* .banner-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -5%;
-    width: 108%;
-    height: .2rem;
-    background: #52E5E5;
-}
-
-.banner-content::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -25%;
-    width: 50%;
-    height: .2rem;
-    transform: rotate(90deg);
-    background: #52E5E5;
-} */
 
 .banner-content h1 {
   font-family: var(--Font-Family-2);
@@ -441,7 +422,8 @@ body {
   margin-top: 10rem;
 }
 
-.contact-alt, .everify-alt {
+.contact-alt,
+.everify-alt {
   width: 50rem;
   height: 70rem;
   display: flex;
@@ -492,9 +474,9 @@ body {
   position: absolute;
   bottom: 0;
   right: 1rem;
-  background: #F8F8F8;
+  background: #f8f8f8;
   padding: 1rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 .form {
@@ -584,7 +566,7 @@ body {
 .everify-alt img {
   width: 22rem;
   background: #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   margin: 4rem 0;
   padding: 1rem 2rem;
 }
@@ -593,7 +575,7 @@ body {
   font-family: var(--Font-Family-1);
   font-weight: 400;
   font-size: 2rem;
-  color: #E0E0E0;
+  color: #e0e0e0;
   letter-spacing: 0.2rem;
   line-height: 3.5rem;
 }
@@ -627,11 +609,11 @@ body {
   }
 
   .et-business-links {
-    
     padding: 1.2rem 8rem;
   }
 
-  .contacts .phone, .contacts .email {
+  .contacts .phone,
+  .contacts .email {
     font-size: 1.5rem;
   }
 
@@ -651,7 +633,7 @@ body {
 
   .navbar {
     height: 10rem;
-    padding:  0 8rem;
+    padding: 0 8rem;
   }
 
   .logo {
@@ -742,7 +724,8 @@ body {
     margin-top: 5rem;
   }
 
-  .contact-alt, .everify-alt {
+  .contact-alt,
+  .everify-alt {
     width: 40rem;
     height: 60rem;
     padding: 8rem 4rem;
@@ -804,11 +787,11 @@ body {
   }
 
   .footer {
-    height:  8rem;
+    height: 8rem;
   }
 
   .footer p {
-    font-size:  1.3rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -947,7 +930,8 @@ body {
     padding: 0 6rem;
   }
 
-  .contacts .phone, .contacts .email {
+  .contacts .phone,
+  .contacts .email {
     font-size: 1.3rem;
   }
 
@@ -1020,7 +1004,6 @@ body {
   .show .burger {
     position: fixed;
     right: 4rem;
-    /* top: 7rem; */
     height: 5rem;
   }
 
@@ -1139,11 +1122,12 @@ body {
   }
 
   .contact-form {
-    width:  calc(100% - 2rem);
+    width: calc(100% - 2rem);
     flex-direction: column;
   }
 
-  .contact-alt, .everify-alt {
+  .contact-alt,
+  .everify-alt {
     width: 100%;
   }
 
@@ -1207,7 +1191,7 @@ body {
   }
 
   .footer p {
-    font-size:  1.2rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1310,7 +1294,8 @@ body {
     padding: 1rem 4rem;
   }
 
-  .contacts .phone, .contacts .email {
+  .contacts .phone,
+  .contacts .email {
     font-size: 1.2rem;
     margin-right: 2rem;
   }
@@ -1330,7 +1315,7 @@ body {
   }
 
   .navbar {
-    height:  7rem;
+    height: 7rem;
   }
 
   .logo {
@@ -1399,9 +1384,8 @@ body {
 }
 
 @media (max-width: 420px) {
-
   .et-business-links {
-    padding: .6rem 3rem;
+    padding: 0.6rem 3rem;
   }
 
   .contacts {
@@ -1409,11 +1393,12 @@ body {
     align-items: flex-start;
   }
 
-  .contacts .phone, .contacts .email {
+  .contacts .phone,
+  .contacts .email {
     font-size: 1.1rem;
     margin-right: 0;
     justify-content: flex-start;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .contacts i {
@@ -1429,9 +1414,9 @@ body {
   .social-media-link i {
     font-size: 1rem;
   }
-.navbar {
-  height:  6rem;
-}
+  .navbar {
+    height: 6rem;
+  }
 
   .banner-content h1 {
     font-size: 2.5rem;
@@ -1536,7 +1521,7 @@ body {
   }
 
   .footer .copyright {
-    font-size:  1rem;
+    font-size: 1rem;
   }
 }
 /* End of Responsives */
