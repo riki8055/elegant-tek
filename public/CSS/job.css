@@ -646,7 +646,7 @@ body {
     .show .burger {
       position: fixed;
       right: 4rem;
-      top: 1rem;
+      height: 5rem;
     }
   
     .burger .line {
@@ -662,10 +662,6 @@ body {
       align-self: flex-start;
       opacity: 1;
       visibility: visible;
-    }
-  
-    .show .burger {
-      height: 5rem;
     }
   
     .show .line {
@@ -882,6 +878,10 @@ body {
     font-size: 1.2rem;
   }
 
+  .navbar {
+    height:  7rem;
+  }
+
   .logo {width: 15rem;}
 
   .nav-links {
@@ -944,17 +944,21 @@ body {
   .contacts i {
     font-size: 1.3rem;
   }
+
+  .navbar {
+    height:  6rem;
+  }
   .section-1 {
     padding: 5rem 2rem 0 2rem;
   }
 
   .section-1-heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .section-1-para {
-    font-size: 1.4rem;
-    line-height: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
 
   .section-2 {

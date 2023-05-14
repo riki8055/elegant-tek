@@ -397,7 +397,7 @@ body {
       .show .burger {
         position: fixed;
         right: 4rem;
-        top: 1rem;
+        height: 5rem;
       }
     
       .burger .line {
@@ -413,10 +413,6 @@ body {
         align-self: flex-start;
         opacity: 1;
         visibility: visible;
-      }
-    
-      .show .burger {
-        height: 5rem;
       }
     
       .show .line {
@@ -513,6 +509,10 @@ body {
   .social-media-link i {
     font-size: 1.2rem;
   }
+
+  .navbar {
+    height:  7rem;
+  }
       .logo {
         width: 15rem;
       }
@@ -556,6 +556,10 @@ body {
 
   .contacts i {
     font-size: 1.3rem;
+  }
+
+  .navbar {
+    height:  6rem;
   }
     .section-1 {
         height: 30vh;
