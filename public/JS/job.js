@@ -12,3 +12,16 @@ btnCancel.addEventListener('click', () => {
     document.querySelector('.dark-cover').style.opacity = 0;
     document.querySelector('.dark-cover').style.visibility = 'hidden';
 })
+
+// Sidebar
+const menuBtn = document.querySelector(".burger");
+
+menuBtn.addEventListener("click", () => {
+  document.querySelector(".navbar").classList.toggle("show");
+  if(document.querySelector(".navbar").classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "scroll"
+  }
+});
+// End of Sidebar

@@ -16,7 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/CSS/job.css">
+    <link rel="stylesheet" href="/CSS/job.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
       integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
@@ -30,139 +30,168 @@
       referrerpolicy="no-referrer"
     ></script>
   </head>
-<body>
-  <div class="dark-cover"></div>
-  <div class="et-business-links">
-    <div class="contacts">
-      <div class="phone">
-        <i class="fa-solid fa-phone"></i>
-        <h4>210-758-0724</h4>
+  <body>
+    <div class="dark-cover"></div>
+    <div class="et-business-links">
+      <div class="contacts">
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i>
+          <h4>210-758-0724</h4>
+        </div>
+
+        <div class="email">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>info@eleganttek.com</h4>
+        </div>
       </div>
 
-      <div class="email">
-        <i class="fa-solid fa-envelope"></i>
-        <h4>info@eleganttek.com</h4>
-      </div>
-    </div>
-
-    <div class="social-media-links">
-      <a href="https://www.linkedin.com/company/elegant-tek/" class="social-media-link" title="LinkedIn" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/elegant-tek/" class="social-media-link" title="LinkedIn" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </div>
-  </div>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <a href="/" class="logo">
-          <img src="/Images/Logo.svg" alt="logo" />
+      <div class="social-media-links">
+        <a
+          href="https://www.linkedin.com/company/elegant-tek/"
+          class="social-media-link"
+          title="LinkedIn"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook"></i>
         </a>
-        <ul class="nav-links">
-          <li class="nav-link"><a href="/">Home</a></li>
-          <li class="nav-link"><a href="/services">Services</a></li>
-          <li class="nav-link"><a href="/about">About</a></li>
-          <li class="nav-link active"><a href="/careers">Careers</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-          <div class="line line3"></div>
-        </div>
-      </nav>
-      <!-- End of Navbar -->
-    </header>
-    <!-- End of Header -->
-
-    <!-- Section 1 -->
-    <section class="section-1">
-      <h1 class="section-1-heading">Career With Us</h1>
-      <p class="section-1-para">
-        Welcome to our careers page! We're excited that you're interested in
-        joining our team. At Elegant Tek, we believe that our employees are our
-        greatest asset, and we're always looking for talented individuals who
-        share our passion to empower our clients with the knowledge, skills, and
-        tools they need to navigate complex IT challenges and maximize their
-        return on investment. Here you can explore our current job opening and
-        learn more about the positions we have available. We encourage you to apply if you think you'd be a good fit for any of
-        the roles we're offering. We're committed to creating a diverse,
-        inclusive, and rewarding work environment, and we look forward to
-        hearing from you!
-      </p>
-    </section>
-    <!-- End of Section 1 -->
-
-    <!-- Section 2 -->
-    <section class="section-2">
-      <div class="section-block">
-        <h3 class="section-block-type">Job Title</h3>
-        <h2 class="section-block-title"><%= job.jobTitle %></h2>
+        <a
+          href="https://www.linkedin.com/company/elegant-tek/"
+          class="social-media-link"
+          title="LinkedIn"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
       </div>
-
-      <div class="section-block">
-        <h3 class="section-block-type">Job Position</h3>
-        <h2 class="section-block-title"><%= job.jobPosition %></h2>
-      </div>
-
-      <div class="section-block">
-        <h3 class="section-block-type">Job Location</h3>
-        <h2 class="section-block-title"><%= job.jobLocation %></h2>
-      </div>
-
-      <div class="section-block">
-        <h3 class="section-block-type">Roles & Responsibilities</h3>
-        <ul>
-          <% for(let role of job.jobRoles) { %>
-          <li><%= role %></li>
-          <% } %>
-        </ul>
-      </div>
-
-      <div class="section-block">
-        <h3 class="section-block-type">Qualification</h3>
-        <ul>
-          <% for(let qualification of job.jobQualifications) { %>
-          <li><%= qualification %></li>
-          <% } %>
+    </div>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <!-- Navbar -->
+        <nav class="navbar">
+          <a href="/" class="logo">
+            <img src="/Images/Logo.svg" alt="logo" />
+          </a>
+          <ul class="nav-links">
+            <li class="nav-link"><a href="/">Home</a></li>
+            <li class="nav-link"><a href="/services">Services</a></li>
+            <li class="nav-link"><a href="/about">About</a></li>
+            <li class="nav-link active"><a href="/careers">Careers</a></li>
           </ul>
-    </div>
+          <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <!-- End of Header -->
 
-    <button class="btn btn-apply">apply</button>
-    </section>
-    <!-- End of Section 2 -->
-
-    <!-- Apply Form -->
-    <div class="apply-form">
-      <div class="message">
-        <div class="logo-wrapper">
-          <img src="/Images/logo-symbol.png" alt="Elegant Tek Symbol">
-        </div>
-        <p>
-          Thanks for your interest in joining our team! Please use the form to apply for the position.
+      <!-- Section 1 -->
+      <section class="section-1">
+        <h1 class="section-1-heading">Career With Us</h1>
+        <p class="section-1-para">
+          Welcome to our careers page! We're excited that you're interested in
+          joining our team. At Elegant Tek, we believe that our employees are
+          our greatest asset, and we're always looking for talented individuals
+          who share our passion to empower our clients with the knowledge,
+          skills, and tools they need to navigate complex IT challenges and
+          maximize their return on investment. Here you can explore our current
+          job opening and learn more about the positions we have available. We
+          encourage you to apply if you think you'd be a good fit for any of the
+          roles we're offering. We're committed to creating a diverse,
+          inclusive, and rewarding work environment, and we look forward to
+          hearing from you!
         </p>
-      </div>
-      <form action="/careers/<%= job.jobPosition %>/upload" method="post" enctype="multipart/form-data">
-        <h2 class="job-title">Job Application</h2>
-        <input type="text" value="<%= job.jobTitle %>" name="title" readonly>
-        <input type="text" name="name" placeholder="full name">
-        <input type="email" name="email" placeholder="email address">
-        <input type="number" name="number" placeholder="contact number">
-        <div class="upload">
-          <label for="resume">Upload Resume</label>
-          <input type="file" name="resume">
+      </section>
+      <!-- End of Section 1 -->
+
+      <!-- Section 2 -->
+      <section class="section-2">
+        <div class="section-block">
+          <h3 class="section-block-type">Job Title</h3>
+          <h2 class="section-block-title"><%= job.jobTitle %></h2>
         </div>
 
-        <button type="submit" class="btn-submit">Submit Application</button>
-        <button type="button" class="btn-cancel">Cancel</button>
-      </form>
-    </div>
-    <!-- End of Apply Form -->
-  </div>
-</body>
+        <div class="section-block">
+          <h3 class="section-block-type">Job Position</h3>
+          <h2 class="section-block-title"><%= job.jobPosition %></h2>
+        </div>
 
-<script src="/JS/job.js"></script>
-<%- include('partials/foot') %>
+        <div class="section-block">
+          <h3 class="section-block-type">Job Location</h3>
+          <h2 class="section-block-title"><%= job.jobLocation %></h2>
+        </div>
+
+        <div class="section-block">
+          <h3 class="section-block-type">Roles & Responsibilities</h3>
+          <ul>
+            <% for(let role of job.jobRoles) { %>
+            <li><%= role %></li>
+            <% } %>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3 class="section-block-type">Qualification</h3>
+          <ul>
+            <% for(let qualification of job.jobQualifications) { %>
+            <li><%= qualification %></li>
+            <% } %>
+          </ul>
+        </div>
+
+        <button class="btn btn-apply">apply</button>
+      </section>
+      <!-- End of Section 2 -->
+
+      <!-- Apply Form -->
+      <div class="apply-form">
+        <div class="message">
+          <div class="logo-wrapper">
+            <img src="/Images/logo-symbol.png" alt="Elegant Tek Symbol" />
+          </div>
+          <p>
+            Thanks for your interest in joining our team! Please use the form to
+            apply for the position.
+          </p>
+        </div>
+        <form
+          action="/careers/<%= job.jobPosition %>/upload"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <h2 class="job-title">Job Application</h2>
+          <input
+            type="text"
+            value="<%= job.jobTitle %>"
+            name="title"
+            readonly
+          />
+          <input type="text" name="name" placeholder="full name" />
+          <input type="email" name="email" placeholder="email address" />
+          <input type="number" name="number" placeholder="contact number" />
+          <div class="upload">
+            <label for="resume">Upload Resume</label>
+            <input type="file" name="resume" />
+          </div>
+
+          <button type="submit" class="btn-submit">Submit Application</button>
+          <button type="button" class="btn-cancel">Cancel</button>
+        </form>
+      </div>
+      <!-- End of Apply Form -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="copyright">
+          &copy; Copyright Elegant Tek 2023 • All Rights Reserved
+        </p>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+
+    <script src="/JS/job.js"></script>
+  </body>
+</html>
