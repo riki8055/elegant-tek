@@ -48,13 +48,7 @@
 
 ### Consent
 
-I hereby consent to Elegant Tek LLC collecting, processing, and
-storing my personal data for the purpose of considering me for
-employment, including conducting background checks, arranging
-travel, and contacting references. The personal data provided in
-this application will be retained by Elegant Tek LLC for a period
-of one year from the date of this application, after which it will
-be deleted from our systems unless you are hired. You have the
-right to access, correct, modify, update, rectify, request for
-the transfer or deletion of data, withdrawal of consent, or
-objection to processing of data by sending an email to
+### Note
+
+- Create a uploads/ directory before running on local server.
+- Also Create a .env file and configure following in it: EMAIL=your_email PASSWORD=password
