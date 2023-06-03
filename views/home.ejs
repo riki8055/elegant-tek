@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Images/logo-symbol.png" type="image/x-icon" />
-    <title>Home - Elegant Tek</title>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      rel="shortcut icon"
+      href="/Images/Symbols/logo-symbol.png"
+      type="image/x-icon"
     />
+    <title>Elegant Tek</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,90 +17,82 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="/CSS/home.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"
-      integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
   </head>
   <body>
-    <div id="message">
-      <p></p>
-      <button class="btn-close-msg">
-        <i class="fa-solid fa-times"></i>
-      </button>
-    </div>
-
-    <div class="et-business-links">
-      <div class="contacts">
+    <div class="social-media-header">
+      <div class="contact">
         <div class="phone">
-          <i class="fa-solid fa-phone"></i>
-          <h4>210-758-0724</h4>
+          <i class="fa-sharp fa-solid fa-phone"></i>
+          <span>Phone: +1-608-285-2631</span>
         </div>
 
-        <div class="email">
-          <i class="fa-solid fa-envelope"></i>
-          <h4>info@eleganttek.com</h4>
+        <div class="mail">
+          <i class="fa-sharp fa-solid fa-envelope"></i>
+          <span>Email: contact@eleganttek.com</span>
         </div>
       </div>
 
       <div class="social-media-links">
         <a
-          href="https://www.linkedin.com/company/elegant-tek/"
+          href="https://www.facebook.com/profile.php?id=100092390304118"
           class="social-media-link"
-          title="LinkedIn"
           target="_blank"
         >
-          <i class="fa-brands fa-facebook"></i>
+          <i class="fab fa-facebook-f"></i>
         </a>
+
         <a
           href="https://www.linkedin.com/company/elegant-tek/"
           class="social-media-link"
-          title="LinkedIn"
           target="_blank"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
     </div>
     <div class="container">
-      <!-- Header -->
-      <header class="header">
-        <!-- Navbar -->
-        <nav class="navbar">
-          <a href="/" class="logo">
-            <img src="/Images/Logo.svg" alt="logo" />
-          </a>
-          <ul class="nav-links">
-            <li class="nav-link active"><a href="#section1">Home</a></li>
-            <li class="nav-link"><a href="#section2">Services</a></li>
-            <li class="nav-link"><a href="#section3">About</a></li>
-            <li class="nav-link"><a href="#section4">Contact</a></li>
-            <li class="nav-link-alt"><a href="/careers">Careers</a></li>
-          </ul>
-          <button class="burger btn">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-          </button>
-        </nav>
-        <!-- End of Navbar -->
-      </header>
-      <!-- End of Header -->
+      <div class="tooltip">
+        <!-- Show a message not delivered -->
+        <p>Message delivered!</p>
+        <button class="btn btn-close-tooltip">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="dark-cover"></div>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="/Images/Logos/Logo.png" alt="Elegant Tek" />
+        </a>
 
+        <ul class="nav-links">
+          <li class="nav-link active"><a href="#home">home</a></li>
+          <li class="nav-link"><a href="#about">about us</a></li>
+          <li class="nav-link"><a href="#services">services</a></li>
+          <li class="nav-link"><a href="#careers">careers</a></li>
+          <li class="nav-link"><a href="#contact">contact us</a></li>
+        </ul>
+
+        <div class="btn btn-menu">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </nav>
+      <!-- End of Navbar -->
       <!-- Section 1 -->
-      <section id="section1" class="section-1" data-nav="Section 1">
-        <div class="swiper mySwiper">
+      <section class="section-1" id="home">
+        <div class="swiper mainSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide banner">
-              <img
-                src="/Images/Home Page Assets/Banner Image_1.jpg"
-                class="banner-img"
-                alt="Header 1"
-              />
-              <div class="banner-content">
+            <div class="swiper-slide slide-1">
+              <img src="/Images/Assets/BGs/Home Slider Image 1.jpg" />
+              <div class="banner">
                 <h1>Partner with the Best IT Consultants</h1>
                 <p>
                   From strategy development to implementation, we offer
@@ -109,18 +101,26 @@
               </div>
             </div>
 
-            <div class="swiper-slide banner">
-              <img
-                src="/Images/Home Page Assets/Banner Image_2.jpg"
-                class="banner-img"
-                alt="Header 2"
-              />
-              <div class="banner-content">
+            <div class="swiper-slide slide-2">
+              <img src="/Images/Assets/BGs/Home Slider Image 2.jpg" />
+              <div class="banner">
                 <h1>Expert IT Consulting for Your Unique Needs</h1>
                 <p>
                   We understand that every business is different - that's why we
                   tailor our solutions to fit your specific goals and
                   requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide slide-3">
+              <img src="/Images/Assets/BGs/Home Slider Image 3.jpg" />
+              <div class="banner">
+                <h1>Unleashing the Power of Technology for Your Business</h1>
+                <p>
+                  With our proactive approach and deep industry knowledge, we
+                  are your trusted partner in navigating the complexities of the
+                  digital age and staying ahead of the competition.
                 </p>
               </div>
             </div>
@@ -130,135 +130,477 @@
       <!-- End of Section 1 -->
 
       <!-- Section 2 -->
-      <section id="section2" class="section-2" data-nav="Section 2">
-        <div class="section-title section-2-title">
-          Services
-          <h1 class="main-title">Our Services</h1>
+      <section class="section-2" id="about">
+        <div class="section-2-heading-wrapper section-heading-wrapper">
+          <div class="heading">
+            <h1>we are elegant tek</h1>
+            <div class="line"></div>
+          </div>
+
+          <div class="para">
+            <p>
+              Navigating the digital landscape with tailored IT consulting
+              solutions
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_1.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>Relentless Focus On Delivering Excellence</h1>
+              <p>
+                Your trusted partner for comprehensive IT consulting services.
+                we empower businesses to harness the power of technology and
+                achieve their strategic objectives.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_2.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>In-depth industry knowledge and extensive experience</h1>
+              <p>
+                We understand the critical role that technology plays in today's
+                fast-paced business landscape. We offer expert guidance and
+                customized solutions tailored to meet your unique challenges and
+                goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_3.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>
+                We deliver innovative strategies and cutting-edge solutions that
+                drive tangible results
+              </h1>
+              <p>
+                Our team of highly skilled professionals is dedicated to
+                providing exceptional service and building long-lasting
+                partnerships. We take the time to understand your business
+                inside out, allowing us to deliver innovative strategies and
+                cutting-edge solutions that drive tangible results.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_4.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>As a client-centric company, we prioritize your success</h1>
+              <p>
+                We believe in transparent communication, collaborative
+                problem-solving, and a relentless commitment to delivering
+                value. Our track record of satisfied clients speaks for itself,
+                as we consistently exceed expectations and help businesses
+                thrive in the digital age.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_5.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>Let us navigate the complexities of technology together</h1>
+              <p>
+                Partner with Elegant Tek and experience the difference of
+                working with a trusted IT consulting firm. Unlock new
+                possibilities and drive your business towards sustainable growth
+                and success.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="/Images/Assets/About/card_img_6.jpg" />
+            </div>
+
+            <div class="card-content">
+              <h1>
+                Passionate about empowering businesses with the right technology
+                solutions
+              </h1>
+              <p>
+                Our team of seasoned IT professionals is dedicated to providing
+                innovative and customized solutions that align with your
+                business objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-light">contact us</a>
+      </section>
+      <!-- End of Section 2 -->
+
+      <!-- Section 3 -->
+      <section class="section-3" id="services">
+        <div class="section-3-heading-wrapper section-heading-wrapper">
+          <div class="heading">
+            <h1>our services</h1>
+            <div class="line"></div>
+          </div>
+
+          <div class="para">
+            <p>
+              Harness the power of technology with our comprehensive IT
+              consultancy services
+            </p>
+          </div>
         </div>
 
         <div class="services">
           <div class="service">
-            <img
-              src="/Images/Home Page Assets/cloud-service.png"
-              alt="Cloud Service"
-            />
+            <div class="service-img">
+              <img src="/Images/Assets/Services/app-development.png" />
+            </div>
             <div class="service-content">
-              <h3 class="service-content-heading">
-                Cloud Technology Solutions
-              </h3>
-              <p class="service-content-para">
-                Unlock the full potential of your business with cloud technology
-                solutions.
+              <h1>Mobile Apps Development</h1>
+              <p>Bridging the gap between your business and your customers.</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-img">
+              <img src="/Images/Assets/Services/enterprise.png" />
+            </div>
+            <div class="service-content">
+              <h1>Enterprise Web Applications</h1>
+              <p>Empower your enterprise with cutting-edge technology.</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-img">
+              <img src="/Images/Assets/Services/cloud-service.png" />
+            </div>
+            <div class="service-content">
+              <h1>Cloud Technology Solutions</h1>
+              <p>
+                Unlock the full potential of your business with cloud solutions.
               </p>
             </div>
           </div>
 
           <div class="service">
-            <img
-              src="/Images/Home Page Assets/app-development.png"
-              alt="App Development"
-            />
+            <div class="service-img">
+              <img src="/Images/Assets/Services/analytics.png" />
+            </div>
             <div class="service-content">
-              <h3 class="service-content-heading">Mobile Apps Development</h3>
-              <p class="service-content-para">
-                Bridging the gap between your business and your customers.
+              <h1>Data Analytics</h1>
+              <p>Transform your data into actionable insights.</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-img">
+              <img src="/Images/Assets/Services/ui.png" />
+            </div>
+            <div class="service-content">
+              <h1>UI/UX & Web Development Solutions</h1>
+              <p>Web development that's tailored to your needs and goals.</p>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-img">
+              <img src="/Images/Assets/Services/testing.png" />
+            </div>
+            <div class="service-content">
+              <h1>IT Testing Services</h1>
+              <p>
+                Comprehensive testing services to ensure your software is ready
+                to launch.
               </p>
             </div>
           </div>
 
           <div class="service">
-            <img
-              src="/Images/Home Page Assets/infrastructure.png"
-              alt="Infrastructure"
-            />
+            <div class="service-img">
+              <img src="/Images/Assets/Services/analytics.png" />
+            </div>
             <div class="service-content">
-              <h3 class="service-content-heading">Infrastructure Services</h3>
-              <p class="service-content-para">
+              <h1>Infrastructure Services</h1>
+              <p>
                 Efficient and effective infrastructure services for modern
                 businesses.
               </p>
             </div>
           </div>
+
+          <div class="service">
+            <div class="service-img">
+              <img src="/Images/Assets/Services/support.png" />
+            </div>
+            <div class="service-content">
+              <h1>BPO Services</h1>
+              <p>Streamline your business processes with our BPO services.</p>
+            </div>
+          </div>
         </div>
 
-        <a href="/services" class="btn service-btn"
-          >see more <i class="fa-solid fa-arrow-right"></i
-        ></a>
-      </section>
-      <!-- End of Section 2 -->
-
-      <!-- Section 3 -->
-      <section id="section3" class="section-3" data-nav="Section 3">
-        <h1 class="section-3-heading">Want to know more about us?</h1>
-        <a href="/about" class="btn about-btn">more about us</a>
+        <a href="/services" class="btn btn-light">more services</a>
       </section>
       <!-- End of Section 3 -->
 
       <!-- Section 4 -->
-      <section id="section4" class="section-4" data-nav="Section 4">
-        <div class="section-title section-4-title">
-          Contact
-          <h1 class="main-title">Contact Us</h1>
-        </div>
-
-        <div class="contact-form">
-          <div class="contact-alt">
-            <img src="/Images/Home Page Assets/email-png.png" alt="Email" />
-
-            <div class="address">
-              <i class="fa-solid fa-location-dot"></i>
-              <h4>583 D'ONOFRIO DRIVE SUITE 4 MADISON, WI 53719</h4>
-            </div>
-
-            <div class="phone">
-              <i class="fa-solid fa-phone"></i>
-              <h4>210-758-0724</h4>
-            </div>
-
-            <div class="email">
-              <i class="fa-solid fa-envelope"></i>
-              <h4>contact@eleganttek.com</h4>
-            </div>
+      <section class="section-4" id="careers">
+        <div class="section-4-heading-wrapper section-heading-wrapper">
+          <div class="heading">
+            <h1>career with us</h1>
+            <div class="line"></div>
           </div>
-          <form action="/" method="post" class="form">
-            <h2 class="form-heading">message us!</h2>
-            <div class="form-control">
-              <input type="text" name="username" placeholder="Your name" />
-            </div>
 
-            <div class="form-control">
-              <input type="email" name="email" placeholder="Your email" />
-            </div>
-
-            <div class="form-control">
-              <textarea name="message" placeholder="Your message"></textarea>
-            </div>
-
-            <button class="btn form-btn" type="submit">send message</button>
-          </form>
-          <div class="everify-alt">
-            <h2>ELEGANT TEK LLC. PARTICIPATES IN E-VERIFY</h2>
-            <img src="/Images/E-Verify.svg" alt="E-Verify Badge" />
+          <div class="para">
             <p>
-              Elegant Tek will provide the Social Security Administration (SSA)
-              and, if necessary, the Department of Homeland Security (DHS), with
-              information from each new employee’s Form I-9 to confirm work
-              authorization.
+              Join our team of talented professionals and work on cutting-edge
+              projects that make a real difference in the world.
             </p>
           </div>
         </div>
+
+        <div class="career-benefits">
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Assets/Career/Image_1.png" />
+            </div>
+
+            <div class="card-content">
+              <h1>professional growth</h1>
+              <p>
+                We are committed to your professional development. Take
+                advantage of our training programs, workshops, and mentorship
+                opportunities to enhance your skills and advance your career
+                within the company.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Assets/Career/Image_2.png" />
+            </div>
+
+            <div class="card-content">
+              <h1>Meaningful Work</h1>
+              <p>
+                Make a real impact on the world through projects that matter.
+                Join our team and contribute to innovative solutions that
+                address significant challenges and shape the future.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Assets/Career/Image_3.png" />
+            </div>
+
+            <div class="card-content">
+              <h1>Work-Life Balance</h1>
+              <p>
+                We understand the importance of maintaining a healthy work-life
+                balance. Benefit from flexible work arrangements, paid time off,
+                and employee wellness programs that promote your well-being.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Assets/Career/Image_4.png" />
+            </div>
+
+            <div class="card-content">
+              <h1>Exciting Challenges</h1>
+              <p>
+                Embrace new challenges and opportunities for growth. Our dynamic
+                work environment offers exciting projects, cutting-edge
+                technologies, and the chance to expand your skill set.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Assets/Career/Image_5.png" />
+            </div>
+
+            <div class="card-content">
+              <h1>Company Culture</h1>
+              <p>
+                Join a company with a positive and inclusive culture. We value
+                diversity, teamwork, and open communication, creating an
+                environment where you can thrive and feel connected.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/careers" class="btn btn-light">see job positions</a>
       </section>
       <!-- End of Section 4 -->
+
+      <!-- Section 5 -->
+      <section class="section-5" id="contact">
+        <div class="section-5-heading-wrapper section-heading-wrapper">
+          <div class="heading">
+            <h1>contact us</h1>
+            <div class="line"></div>
+          </div>
+
+          <div class="para">
+            <p>
+              Get in touch with our dedicated IT consultancy team today to
+              discuss your unique needs
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <div class="form-alt">
+            <div class="swiper contactSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide alt-details">
+                  <div class="alt-country-name">
+                    <h2>US</h2>
+                  </div>
+                  <div class="alt-detail address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>583 D’ONOFRIO DRIVE SUITE 4 MADISON, WI 53719</h3>
+                  </div>
+
+                  <div class="alt-detail contact">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <h3>+1-608-285-2631</h3>
+                  </div>
+
+                  <div class="alt-detail mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>contact@eleganttek.com</h3>
+                  </div>
+                </div>
+
+                <div class="swiper-slide alt-details">
+                  <div class="alt-country-name">
+                    <h2>UK</h2>
+                  </div>
+                  <div class="alt-detail address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>
+                      FORUNITY TECHNOLOGIES LIMITED 42 SWALLOW CRESCENT LEEDS -
+                      LS12 4RB
+                    </h3>
+                  </div>
+
+                  <div class="alt-detail contact">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <h3>+1-123-456-7890</h3>
+                  </div>
+
+                  <div class="alt-detail mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>contact@mail.com</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination alt-switches"></div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <form action="/contact" class="form-main" method="post">
+            <h3>message us!</h3>
+            <div class="form-control">
+              <label for="name">your name</label>
+              <input
+                type="text"
+                id="name"
+                class="input"
+                name="name"
+                placeholder="eg: John Doe"
+                required
+              />
+              <div class="feedback">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>This is the feedback for name!</span>
+              </div>
+            </div>
+
+            <div class="form-control">
+              <label for="email">your email</label>
+              <input
+                type="email"
+                id="email"
+                class="input"
+                name="email"
+                placeholder="eg: johndoe@example.com"
+                required
+              />
+              <div class="feedback">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>This is the feedback for email!</span>
+              </div>
+            </div>
+
+            <div class="form-control">
+              <label for="message">your message</label>
+              <textarea
+                name="message"
+                id="message"
+                class="input"
+                placeholder="eg: Hi team Elegant Tek..."
+                required
+              ></textarea>
+              <div class="feedback"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              send message
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- End of Section 5 -->
 
       <!-- Footer -->
       <footer class="footer">
         <p class="copyright">
-          &copy; Copyright Elegant Tek 2023 • All Rights Reserved
+          Copyright © 2023 Elegant Tek LLC. All Rights Reserved
         </p>
       </footer>
       <!-- End of Footer -->
     </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"
+      integrity="sha512-+z66PuMP/eeemN2MgRhPvI3G15FOBbsp5NcCJBojg6dZBEFL0Zoi0PEGkhjubEcQF7N1EpTX15LZvfuw+Ej95Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/JS/script.js"></script>
     <script src="/JS/home.js"></script>
   </body>
 </html>

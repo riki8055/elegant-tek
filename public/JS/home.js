@@ -1,119 +1,165 @@
-// Navbar Position
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  const section2 = document.querySelector(".section-2");
-  const section2Top = section2.offsetTop;
+// Navbar
+const navbar = document.querySelector(".navbar");
+const navbarOffsetTop = navbar.offsetTop;
+const section1offsetbottom = document.querySelector(".section-1").offsetHeight;
+const sections = document.querySelectorAll("section");
+const navbarLinks = document.querySelectorAll(".nav-link");
 
-  if (window.pageYOffset >= section2Top - 1) {
-    navbar.classList.add("nav-scroll");
+window.addEventListener("scroll", () => {
+  mainFn();
+});
+
+const mainFn = () => {
+  if (window.pageYOffset >= section1offsetbottom) {
+    navbar.classList.add("sticky");
   } else {
-    navbar.classList.remove("nav-scroll");
+    navbar.classList.remove("sticky");
+  }
+
+  sections.forEach((section, i) => {
+    if (window.pageYOffset >= section.offsetTop - 100) {
+      navbarLinks.forEach((navbarLink) => {
+        navbarLink.classList.remove("active");
+      });
+      navbarLinks[i].classList.add("active");
+    }
+  });
+};
+
+const btnMenu = document.querySelector(".btn-menu");
+
+btnMenu.addEventListener("click", () => {
+  navbar.classList.toggle("sidebar");
+
+  if (navbar.classList.contains("sidebar")) {
+    document.querySelector(".dark-cover").style.opacity = 1;
+    document.querySelector(".dark-cover").style.visibility = "visible";
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.querySelector(".dark-cover").style.opacity = 0;
+    document.querySelector(".dark-cover").style.visibility = "hidden";
+    document.body.style.overflowY = "scroll";
   }
 });
-// End of Navbar Position
 
-// Banner Swiper
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  effect: "fade",
-  loop: true,
-  autoplay: {
-    delay: 10000,
-    disableOnInteraction: false,
+document.querySelectorAll(".nav-link a").forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    navbar.classList.remove("sidebar");
+    document.querySelector(".dark-cover").style.opacity = 0;
+    document.querySelector(".dark-cover").style.visibility = "hidden";
+    document.body.style.overflowY = "scroll";
+  });
+});
+// End of Navbar
+
+// Section 5
+// Swiper Slider
+var contactSwiper = new Swiper(".contactSwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
   },
 });
 
-// End of Banner Swiper
+// Contact Form Validation
+const { isEmpty, isEmail, isLength } = validator;
+const contactForm = document.querySelector(".contact-form .form-main");
+const name = document.querySelector(".contact-form .form-main #name");
+const email = document.querySelector(".contact-form .form-main #email");
+const message = document.querySelector(".contact-form .form-main #message");
+const inputs = document.querySelectorAll(".contact-form .form-main .input");
+const btnSubmit = document.querySelector(
+  ".contact-form .form-main .btn-submit"
+);
 
-// Dynamic Navbar
-// Get all the links in the navbar
-const navbarLinks = document.querySelectorAll(".nav-link a");
+let isFormValid = false;
 
-// Loop through each link and add an event listener
-navbarLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    // Prevent default behavior
-    event.preventDefault();
+btnSubmit.disabled = true;
 
-    // Get the section ID from the href attribute
-    const sectionId = link.getAttribute("href");
-
-    // Scroll to the section
-    document.querySelector(sectionId).scrollIntoView({
-      behavior: "smooth",
-    });
-
-    setTimeout(() => {
-      document.querySelector(".navbar").classList.remove("show");
-      if (document.body.style.overflow === "hidden") {
-        document.body.style.overflow = "scroll";
-      }
-    }, 150);
-  });
+name.addEventListener("keyup", (e) => {
+  if (isEmpty(e.target.value)) {
+    name.parentElement.classList.add("invalid");
+    name.nextElementSibling.innerHTML = `
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <span>Name cannot be empty!</span>
+      `;
+  } else {
+    if (!isEmpty(e.target.value) && !/^[A-Za-z\s]+$/.test(e.target.value)) {
+      name.parentElement.classList.add("invalid");
+      name.nextElementSibling.innerHTML = `
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span>Name must be alphabetic characters only!</span>
+        `;
+    } else {
+      name.parentElement.classList.remove("invalid");
+    }
+  }
 });
 
-// Add an event listener to the window object that listens for scroll events
-window.addEventListener("scroll", (event) => {
-  // Get the current scroll position
-  const scrollPosition =
-    window.pageYOffset || document.documentElement.scrollTop;
+email.addEventListener("keyup", (e) => {
+  if (isEmpty(e.target.value)) {
+    email.parentElement.classList.add("invalid");
+    email.nextElementSibling.innerHTML = `
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span>Email cannot be empty!</span>
+        `;
+  } else {
+    setTimeout(() => {
+      if (!isEmpty(e.target.value) && !isEmail(e.target.value)) {
+        email.parentElement.classList.add("invalid");
+        email.nextElementSibling.innerHTML = `
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>Invalid email address!</span>
+                `;
+      } else {
+        if (!isEmpty(e.target.value) && isEmail(e.target.value)) {
+          email.parentElement.classList.remove("invalid");
+        } else {
+          email.parentElement.classList.add("invalid");
+        }
+      }
+    }, 700);
+  }
+});
 
-  // Loop through each section and check if it's visible on the screen
-  document.querySelectorAll("section").forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
+message.addEventListener("blur", (e) => {
+  if (isEmpty(e.target.value)) {
+    message.parentElement.classList.add("invalid");
+    message.nextElementSibling.innerHTML = `
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <span>Message cannot be empty!</span>
+      `;
+  } else {
+    if (!isEmpty(e.target.value) && !isLength(e.target.value, { min: 20 })) {
+      message.parentElement.classList.add("invalid");
+      message.nextElementSibling.innerHTML = `
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <span>Message must be at least 20 characters!</span>
+      `;
+    } else {
+      message.parentElement.classList.remove("invalid");
+    }
+  }
+});
 
-    if (scrollPosition >= sectionTop - sectionHeight / 8) {
-      // Get the section ID
-      const sectionId = section.getAttribute("id");
-
-      // Remove the active class from all the links in the navbar
-      navbarLinks.forEach((link) => {
-        link.parentElement.classList.remove("active");
-      });
-
-      // Add the active class to the link that corresponds to the current section
-      document
-        .querySelector(`.nav-link a[href="#${sectionId}"]`)
-        .parentElement.classList.add("active");
+// Keep button disabled if form is invalid
+inputs.forEach((input) => {
+  input.addEventListener("keyup", () => {
+    if (
+      !isEmpty(name.value) &&
+      !isEmpty(email.value) &&
+      !isEmpty(message.value) &&
+      isEmail(email.value) &&
+      /^[A-Za-z\s]+$/.test(name.value) &&
+      isLength(message.value, { min: 20 })
+    ) {
+      btnSubmit.disabled = false;
+    } else {
+      btnSubmit.disabled = true;
     }
   });
 });
-
-// End of Dynamic Navbar
-
-// Sidebar
-const menuBtn = document.querySelector(".burger");
-
-menuBtn.addEventListener("click", () => {
-  document.querySelector(".navbar").classList.toggle("show");
-  if (document.querySelector(".navbar").classList.contains("show")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "scroll";
-  }
-});
-// End of Sidebar
-
-// Deliver Message
-// Get the status parameter from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const status = urlParams.get("deliverStatus");
-
-// Display a message based on the status
-if (status === "success") {
-  document.getElementById("message").style.display = "block";
-  document.getElementById("message").style.background = "#74c69d";
-  document.querySelector("#message p").innerHTML =
-    "Message delivered successfully.";
-} else if (status === "error") {
-  document.getElementById("message").style.display = "block";
-  document.getElementById("message").style.background = "#ffd6a5";
-  document.querySelector("#message p").innerHTML =
-    "Error delivering message. Please try again.";
-}
-
-document.querySelector(".btn-close-msg").addEventListener("click", () => {
-  document.getElementById("message").style.display = "none";
-});
-// End of Deliver Message
+// End of Section 5
