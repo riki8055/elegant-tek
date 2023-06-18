@@ -10,14 +10,14 @@ window.addEventListener("scroll", () => {
 });
 
 const mainFn = () => {
-  if (window.pageYOffset >= section1offsetbottom) {
+  if (window.pageYOffset >= section1offsetbottom - 10) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
 
   sections.forEach((section, i) => {
-    if (window.pageYOffset >= section.offsetTop - 100) {
+    if (window.pageYOffset >= section.offsetTop - 50) {
       navbarLinks.forEach((navbarLink) => {
         navbarLink.classList.remove("active");
       });
