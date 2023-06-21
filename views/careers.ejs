@@ -101,48 +101,23 @@
       <!-- End of Section 1 -->
       <!-- Section 2 -->
       <section class="section-2">
-        <div class="job-filter">
-          <div class="filter-control">
-            <label for="job-position">Job Position</label>
-            <select name="job-position" id="job-position">
-              <option value="all">All</option>
-              <option value="web-developer">Web Developer</option>
-              <option value="graphic-designer">Graphic Designer</option>
-              <option value="marketing-manager">Marketing Manager</option>
-              <option value="seo-manager">SEO Manager</option>
-              <option value="content-writer">Content Writer</option>
-            </select>
-          </div>
-
-          <div class="filter-control">
-            <label for="job-location">Job Location</label>
-            <select name="job-location" id="job-location">
-              <option value="all">All</option>
-              <option value="new-york">New York</option>
-              <option value="los-angeles">Los Angeles</option>
-              <option value="chicago">Chicago</option>
-              <option value="houston">Houston</option>
-              <option value="phoenix">Phoenix</option>
-            </select>
-          </div>
-
-          <div class="filter-control">
-            <label for="job-type">Job Type</label>
-            <select name="job-type" id="job-type">
-              <option value="all">All</option>
-              <option value="full-time">Full Time</option>
-              <option value="part-time">Part Time</option>
-              <option value="internship">Internship</option>
-              <option value="freelance">Freelance</option>
-            </select>
-          </div>
-        </div>
-
+        <p class="pre-text">
+          We appreciate your interest in joining our team! While we currently
+          don't have any active job openings, we encourage you to check back in
+          the future as we frequently update our careers page with new
+          opportunities. We are always on the lookout for talented individuals
+          who are passionate about what they do. In the meantime, feel free to
+          explore the other sections of our website to learn more about our
+          company and culture. Thank you for considering us as a potential
+          employer, and we look forward to connecting with you in the future.
+        </p>
+        <a href="/" class="btn btn-light">back to homepage</a>
         <div class="job-cards">
           <% for(let job of fakeJobsJSON) { %>
           <div
             class="job-card"
             id="<%= job.jobID %>"
+            job-title="<%= job.jobTitle %>"
             job-location="<%= job.jobLocation %>"
             job-type="<%= job.jobType %>"
           >
@@ -159,62 +134,6 @@
             >
           </div>
           <% } %>
-
-          <!-- <div class="job-position">
-            <div class="role">
-              <p>
-                <span class="position-number">002</span
-                ><span class="location">new jersey</span>
-              </p>
-              <h3 class="job-type">Back-End Developer</h3>
-            </div>
-
-            <a href="#link" class="btn btn-dark btn-details">see details</a>
-          </div> -->
-
-          <!-- <div class="job-position">
-            <div class="role">
-              <p>
-                <span class="position-number">003</span
-                ><span class="location">chennai</span>
-              </p>
-              <h3 class="job-type">Data Analyst</h3>
-            </div>
-
-            <a href="#link" class="btn btn-dark btn-details">see details</a>
-          </div> -->
-
-          <!-- <div class="job-position">
-            <div class="role">
-              <p>
-                <span class="position-number">004</span
-                ><span class="location">new york</span>
-              </p>
-              <h3 class="job-type">Associate Developer</h3>
-            </div>
-
-            <a href="#link" class="btn btn-dark btn-details">see details</a>
-          </div> -->
-
-          <!-- <div class="job-position">
-            <div class="role">
-              <p>
-                <span class="position-number">005</span
-                ><span class="location">los angeles</span>
-              </p>
-              <h3 class="job-type">Senior Team Lead</h3>
-            </div>
-
-            <a href="#link" class="btn btn-dark btn-details">see details</a>
-          </div> -->
-        </div>
-
-        <div class="show-more">
-          <p>
-            Showing <span class="count">5</span> out of
-            <span class="total">30</span>
-          </p>
-          <button class="btn btn-light btn-show-more">show more</button>
         </div>
       </section>
       <!-- End of Section 2 -->

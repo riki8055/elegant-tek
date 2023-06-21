@@ -50,49 +50,21 @@
 
 /* Careers Page */
 /* Section 2 */
-.job-filter {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* margin-bottom: 5rem; */
-}
-
-.filter-control {
-  display: flex;
-  flex-direction: column;
-}
-
-.filter-control label {
+.pre-text {
+  width: 150rem;
   font-family: var(--Font-Family-Body);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
-  color: var(--Neutral-Color-700);
-  text-transform: capitalize;
+  line-height: 3.5rem;
   letter-spacing: 0.05rem;
-  margin-bottom: 1rem;
-}
-
-.filter-control select {
-  width: 36rem;
-  height: 4rem;
-  border: 1px solid var(--Neutral-Color-600);
-  background: transparent;
-  border-radius: 2rem;
-  padding: 0 1rem;
-  font-family: var(--Font-Family-Body);
-  font-size: 1.6rem;
-  font-weight: 400;
+  text-align: center;
   color: var(--Neutral-Color-700);
-  text-transform: capitalize;
-  letter-spacing: 0.05rem;
-  outline: none;
-  cursor: pointer;
 }
 
 .job-cards {
+  display: none;
   width: 100%;
-  margin: 6rem 0 12rem 0;
+  /* margin: 6rem 0 12rem 0; (KEEP THIS FOR FUTURE)*/
 }
 
 .job-card {
@@ -128,7 +100,6 @@
   color: var(--Neutral-Color-700);
   text-transform: capitalize;
   letter-spacing: 0.05rem;
-  /* margin-bottom: 1rem; */
 }
 
 .section-2 .btn-details,
@@ -139,22 +110,6 @@
 
 .section-2 .btn-details {
   padding: 1.5rem 2.5rem;
-}
-
-.show-more {
-  text-align: center;
-}
-
-.show-more p {
-  font-family: var(--Font-Family-Body);
-  font-size: 1.6rem;
-  color: var(--Neutral-Color-700);
-  margin-bottom: 4rem;
-}
-
-.btn-show-more {
-  border-radius: 5rem;
-  background: transparent;
 }
 /* End of Section 2 */
 /* End of Careers Page */
@@ -194,7 +149,6 @@
   font-size: 2.4rem;
   font-weight: 600;
   color: var(--Neutral-Color-700);
-  /* text-transform: capitalize; */
   letter-spacing: 0.05rem;
   line-height: 4rem;
   margin-left: 2rem;
@@ -232,7 +186,6 @@
   font-weight: 600;
   color: var(--Neutral-Color-200);
   letter-spacing: 0.05rem;
-  /* margin-bottom: 5rem; */
 }
 
 .form-alt img {
@@ -251,7 +204,6 @@
   color: var(--Neutral-Color-300);
   letter-spacing: 0.05rem;
   line-height: 2.2rem;
-  /* margin-bottom: 2rem; */
 }
 
 .form-main {
@@ -316,20 +268,15 @@
 /* Responsives */
 @media (max-width: 1650px) {
   /* Careers Page */
-  .filter-control label {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+  .pre-text {
+    width: 120rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
   }
 
-  .filter-control select {
-    width: 30rem;
-    height: 3.5rem;
-    font-size: 1.4rem;
-  }
-
-  .job-cards {
+  /* .job-cards {
     margin: 5rem 0 10rem 0;
-  }
+  } (KEEP THIS FOR FUTURE)*/
 
   .job-card {
     padding: 2rem 1rem;
@@ -356,11 +303,6 @@
   .section-2 .btn-details,
   .section-2 .btn-show-more {
     padding: 1.4rem 2rem;
-  }
-
-  .show-more p {
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
   }
   /* End of Careers Page */
 
@@ -439,9 +381,14 @@
 
 @media (max-width: 1300px) {
   /* Careers Page */
-  .job-cards {
-    margin: 5rem 0 8rem 0;
+  .pre-text {
+    width: 100rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
+  /* .job-cards {
+    margin: 5rem 0 8rem 0;
+  } (KEEP THIS FOR FUTURE)*/
 
   .job-card p {
     font-size: 1.4rem;
@@ -466,24 +413,23 @@
   .section-2 .btn-show-more {
     padding: 1.5rem 2rem;
   }
-
-  .show-more p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-  }
   /* End of Careers Page */
 }
 
 @media (max-width: 1000px) {
   /* Careers Page */
-  .filter-control select {
-    width: 25rem;
-    height: 3rem;
+  .pre-text {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
   }
 
-  .job-cards {
-    margin: 4rem 0 6rem 0;
+  .section-2 .btn {
+    margin-top: 6rem;
   }
+  /* .job-cards {
+    margin: 4rem 0 6rem 0;
+  } (KEEP THIS FOR FUTURE)*/
 
   .job-card {
     padding: 1.5rem 1rem;
@@ -505,11 +451,6 @@
   .section-2 .btn-details,
   .section-2 .btn-show-more {
     font-size: 1.1rem;
-  }
-
-  .show-more p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
   }
   /* Careers Page */
 
@@ -541,17 +482,16 @@
 
 @media (max-width: 750px) {
   /* Careers Page */
-  .filter-control {
-    width: calc(100% / 3 - 3rem);
-  }
-  .filter-control select {
-    width: 100%;
-    height: 3rem;
+  .pre-text {
+    font-size: 1.5rem;
   }
 
-  .job-cards {
-    margin: 3rem 0 5rem 0;
+  .section-2 .btn {
+    margin-top: 4rem;
   }
+  /* .job-cards {
+    margin: 3rem 0 5rem 0;
+  } (KEEP THIS FOR FUTURE)*/
 
   .job-card {
     padding: 1.5rem 1rem;
@@ -573,11 +513,6 @@
   .section-2 .btn-details,
   .section-2 .btn-show-more {
     font-size: 1rem;
-  }
-
-  .show-more p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
   }
 
   .btn-details,
@@ -622,19 +557,22 @@
     display: none;
   }
   /* Careers Page */
-  .filter-control {
-    width: calc(100% / 3 - 1rem);
+  .container {
+    height: 100vh;
   }
 
-  .filter-control select {
-    height: 2.5rem;
-    font-size: 1.2rem;
-    padding: 0 0.5rem;
+  .pre-text {
+    text-align: justify;
+    line-height: 2rem;
   }
 
-  .job-cards {
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
+  /* .job-cards {
     margin: 4rem 0;
-  }
+  } (KEEP THIS FOR FUTURE)*/
 
   .job-card {
     flex-direction: column;
@@ -655,17 +593,9 @@
     margin-bottom: 2rem;
   }
 
-  .section-2 .btn-details {
-    padding: 1.2rem 2rem;
-  }
-
+  .section-2 .btn-details,
   .section-2 .btn-show-more {
     padding: 1.2rem 2rem;
-  }
-
-  .show-more p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
   }
   /* End of Careers Page */
 
