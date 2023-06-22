@@ -48,7 +48,6 @@ body {
 .container {
   width: 100%;
   position: relative;
-  /* margin-top: 6rem; */
 }
 
 .social-media-header,
@@ -160,7 +159,6 @@ body {
   font-weight: 600;
   border: 0.1rem solid var(--Neutral-Color-700);
   color: var(--Neutral-Color-700);
-  /* background: var(--Neutral-Color-100); */
 }
 
 .btn-light:hover {
@@ -358,9 +356,6 @@ body {
 .social-media-header {
   width: 100%;
   height: 4.5rem;
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
   background-color: #0c7489;
   z-index: 10;
   display: flex;
@@ -699,7 +694,6 @@ body {
   }
 
   .section-heading-wrapper .para {
-    /* width: 30rem; */
     font-size: 1.4rem;
     line-height: 2.6rem;
   }
@@ -756,12 +750,6 @@ body {
     padding: 6rem 4rem 10rem 4rem;
   }
 
-  /* .contact-form,
-  .apply-form {
-    width: calc(100% - 10rem);
-    height: 100%;
-  } */
-
   .section-heading-wrapper h1 {
     font-size: 2.8rem;
     line-height: 3.5rem;
@@ -811,13 +799,12 @@ body {
 
   .form-alt {
     width: 100%;
-    padding: 20rem 0 0 0;
+    /* padding: 20rem 0 0 0; */
     margin-bottom: 5rem;
   }
 
   .form-main {
     width: 100%;
-    padding: 0 0 5rem 0;
   }
 
   .form-main h3 {
@@ -859,10 +846,6 @@ body {
 }
 
 @media (max-width: 750px) {
-  /* .contact-form,
-  .apply-form {
-    width: 100%;
-  } */
   .social-media-header,
   .navbar {
     padding: 0 4rem;
@@ -922,6 +905,10 @@ body {
   .section-4 .btn {
     margin-top: 6rem;
     padding: 1.5rem 3rem;
+  }
+
+  .form-alt {
+    display: none;
   }
 
   .social-media-header .contact i {
@@ -1011,16 +998,16 @@ body {
     width: 100%;
   }
 
-  .form-alt {
-    padding: 25rem 0 0 0;
-  }
-
   .form-alt h3 {
     font-size: 2rem;
   }
 
   .form-main h3 {
     font-size: 2rem;
+  }
+
+  .form-control {
+    margin-bottom: 1.5rem;
   }
 
   .form-control label {
@@ -1030,7 +1017,7 @@ body {
   .form-control input,
   .form-control textarea {
     font-size: 1.3rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin: 0.5rem 0;
   }
 

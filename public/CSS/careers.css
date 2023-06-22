@@ -50,19 +50,7 @@
 
 /* Careers Page */
 /* Section 2 */
-.pre-text {
-  width: 150rem;
-  font-family: var(--Font-Family-Body);
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 3.5rem;
-  letter-spacing: 0.05rem;
-  text-align: center;
-  color: var(--Neutral-Color-700);
-}
-
 .job-cards {
-  display: none;
   width: 100%;
   /* margin: 6rem 0 12rem 0; (KEEP THIS FOR FUTURE)*/
 }
@@ -118,7 +106,6 @@
 /* Section 2 */
 .job-details {
   width: 100%;
-  /* margin: 6rem 0 12rem 0; */
 }
 
 .job-details > div {
@@ -268,12 +255,6 @@
 /* Responsives */
 @media (max-width: 1650px) {
   /* Careers Page */
-  .pre-text {
-    width: 120rem;
-    font-size: 1.6rem;
-    line-height: 3rem;
-  }
-
   /* .job-cards {
     margin: 5rem 0 10rem 0;
   } (KEEP THIS FOR FUTURE)*/
@@ -381,11 +362,6 @@
 
 @media (max-width: 1300px) {
   /* Careers Page */
-  .pre-text {
-    width: 100rem;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
   /* .job-cards {
     margin: 5rem 0 8rem 0;
   } (KEEP THIS FOR FUTURE)*/
@@ -401,7 +377,6 @@
 
   .job-card h3 {
     font-size: var(--Font-Size-Headings-H4);
-    /* margin-bottom: 0.8rem; */
   }
 
   .btn-details,
@@ -418,12 +393,6 @@
 
 @media (max-width: 1000px) {
   /* Careers Page */
-  .pre-text {
-    width: 100%;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-  }
-
   .section-2 .btn {
     margin-top: 6rem;
   }
@@ -452,7 +421,7 @@
   .section-2 .btn-show-more {
     font-size: 1.1rem;
   }
-  /* Careers Page */
+  /* End of Careers Page */
 
   /* Job Page */
   .job-details > div {
@@ -482,10 +451,6 @@
 
 @media (max-width: 750px) {
   /* Careers Page */
-  .pre-text {
-    font-size: 1.5rem;
-  }
-
   .section-2 .btn {
     margin-top: 4rem;
   }
@@ -561,15 +526,6 @@
     height: 100vh;
   }
 
-  .pre-text {
-    text-align: justify;
-    line-height: 2rem;
-  }
-
-  .footer {
-    position: absolute;
-    bottom: 0;
-  }
   /* .job-cards {
     margin: 4rem 0;
   } (KEEP THIS FOR FUTURE)*/
@@ -591,6 +547,10 @@
 
   .job-card h3 {
     margin-bottom: 2rem;
+  }
+
+  .job-card .btn {
+    margin-top: 1rem;
   }
 
   .section-2 .btn-details,
@@ -619,6 +579,18 @@
     line-height: 2rem;
     margin-left: 0.5rem;
   }
+
+  /* Apply Form */
+  .apply-form {
+    width: calc(100% - 5rem);
+  }
+
+  .form-btns .btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  /* End of Apply Form */
   /* End of Job Page */
 }
 

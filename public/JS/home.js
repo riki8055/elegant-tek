@@ -163,3 +163,8 @@ inputs.forEach((input) => {
   });
 });
 // End of Section 5
+
+window.addEventListener("load", () => {
+  document.querySelector(".pre-load").style.display = "none";
+  document.body.style.overflowY = "scroll";
+});

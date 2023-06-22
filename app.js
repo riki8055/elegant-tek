@@ -55,10 +55,53 @@ app.get("/careers", (req, res) => {
   res.render("careers", { fakeJobsJSON });
 });
 
+app.get("/careers/:jobid", (req, res) => {
+  const fakeJobsJSON = require("./fakeJobs.json");
+  const { jobid } = req.params;
+  const job = fakeJobsJSON.find((job) => job.jobID === parseInt(jobid));
+
+  res.render("job", { job });
+});
+
+app.post("/careers/:jobid/upload", upload.single("resume"), (req, res) => {
+  const transporter = nodeMailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
+
+  let fileContent = fs.readFileSync(req.file.path);
+
+  const mailOptions = {
+    from: req.body.email,
+    to: process.env.HRMAIL,
+    replyTo: req.body.email,
+    subject: req.body.title,
+    text: `${req.body.name} <${req.body.email}> applied for ${req.body.role} role.`,
+    attachments: [
+      {
+        filename: req.file.path,
+        content: fileContent,
+      },
+    ],
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      res.redirect("/careers/?deliverStatus=error");
+    } else {
+      res.redirect("/careers/?deliverStatus=success");
+    }
+  });
+});
+
 app.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
 
-  // res.send({ Name: name, Email: email, Message: message });
   const transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     service: "gmail",
