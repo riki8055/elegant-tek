@@ -907,6 +907,11 @@ body {
     padding: 1.5rem 3rem;
   }
 
+  .contact-form,
+  .apply-form {
+    width: 100%;
+  }
+
   .form-alt {
     display: none;
   }
@@ -973,26 +978,6 @@ body {
     left: 3rem;
   }
 
-  .section-2 .btn,
-  .section-3 .btn,
-  .section-4 .btn {
-    margin-top: 4rem;
-    padding: 1rem 2rem;
-  }
-
-  .social-media-header .contact {
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.4rem 0;
-  }
-}
-
-@media (max-width: 420px) {
-  .tooltip {
-    top: 20vh;
-  }
-
   .contact-form,
   .apply-form {
     width: 100%;
@@ -1028,6 +1013,26 @@ body {
   .form-main .feedback i,
   .form-main .feedback span {
     font-size: 1.2rem;
+  }
+
+  .section-2 .btn,
+  .section-3 .btn,
+  .section-4 .btn {
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+  }
+
+  .social-media-header .contact {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .tooltip {
+    top: 20vh;
   }
 
   .section-2 .btn,
