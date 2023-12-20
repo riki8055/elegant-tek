@@ -50,7 +50,7 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/careers", (req, res) => {
-  const fakeJobsJSON = require("./fakeJobs.json");
+  const fakeJobsJSON = require("./demoJobs.json");
 
   res.render("careers", { fakeJobsJSON });
 });
